@@ -4,9 +4,11 @@ ContainerName=glances
 
 Network=glances.network
 
+Secret=glances_password_file,target=/app/.config/glances/glances.pwd,uid=1000,gid=1000,mode=0400
+
 Timezone=local
 
-Environment=GLANCES_OPT="-w --disable-webui"
+Environment=GLANCES_OPT="-w --disable-webui --password"
 
 ReadOnly=true
 ReadOnlyTmpfs=false
