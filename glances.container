@@ -4,6 +4,7 @@ ContainerName=glances
 
 Network=glances.network
 
+# generate glances.pwd by running `glances -w --password` in a temporary glances container
 Secret=glances_password_file,target=/app/.config/glances/glances.pwd,uid=1000,gid=1000,mode=0400
 
 Timezone=local
